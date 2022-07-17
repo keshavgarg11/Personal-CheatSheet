@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    /* CSS Reset */
+}
+
+
+
+
+/* The code which you often forget and that are useful which makes the website more responsive */
+
+.recall{
+    height: fit-content;
+    width: fit-content;
+
+    text-align: center;
+
+    line-height: 0px;
+
+    display: block;   
+    /* In this it will take space of complete row */
+
+    display: inline;
+    /* In this it will take space only till there content is present, but you can't set width in it  */
+
+    display: inline-block;
+    /* In this it will take space only till there content is present, but you can set width in it  */
+
+}
+
+body{
+    font-family: 'Baloo 2', cursive;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.m-auto{
+    margin: auto;
+    /* To work with margin: auto you shold take care of these properties */
+
+    /* The element must be block-level, e.g. display: block or display: table */
+    /* float: none  >>>>>   The element must not float */
+    /* position: relative OR position: static  >>>>>  The element must not have a fixed or absolute position1 */
+    /* The element must have a width that is not auto   >>>>    */
+
+    /* OR */
+
+    /* parent element with display: flex */
+}
+
+.ul{
+    list-style: none;
+}
+
+.li{
+    display: inline-block;
+}
+
+.li a{
+    text-decoration: none;
+}
+
+
+.button{
+    cursor: pointer;
+}
+
+.h1{
+    display: block;
+    margin: auto;
+}
+
+
+
+/* To setting and Backgound Image and writting text on it  */
+#banner{
+	background: url('../images/banner.jpg') no-repeat 0 0;
+	background-size : cover;
+}
+
+.banner-title h1{
+	background: rgba(255,255,255,0.8);
+}
+
+
+/* To setting and Backgound Image and writting text on it and making background image opacity less  */
+
+#testimonials{
+	color: #fff;
+	background: url(../images/testimonial-bg.jpg) no-repeat 0 0;
+	background-size: cover;
+	padding: 50px 0;
+	position: relative;
+}
+
+#testimonials:before{
+	background:rgba(52, 73, 94, 0.7);
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* To make Underline after headings  */
+.section h2.section-head:after{
+	background: #e74c3c;
+	content: "";
+	display: block;
+	width: 100px;
+	height: 3px;
+	margin: 20px auto;
+}
+
+/* Adding FontAwesome Icons with help of css after or before any text  */
+
+.post-date:before{
+	content: "\f073";
+	font-family: FontAwesome;
+	padding-right: 5px;
+}
+
+
+/* Adding FontAwesome Icons with help of HTML  */
+/* <i class="fa fa-bar-chart"></i> */
+
+
+/* If ever you have to apply SECTION class then apply it in COL class only */
+.section{
+	margin: 70px 0;
+}
+
+
+/*To change color oh Hr*/
+height: 2px;
+background-color: #ff0000;
+border: none;
+
+
+
+

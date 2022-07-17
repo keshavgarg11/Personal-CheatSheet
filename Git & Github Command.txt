@@ -1,0 +1,72 @@
+git --version   (Finding Version of Current Programm)
+git status   (Showing Status)
+git init   ( To Intialise a folder as a Repository)
+
+#Changes & Commiting
+git status   (Showing Status)
+git add -A   (Stages all files in staging area)
+git add .   (stages new & modified only, without deleted)
+git add -u  (stages modified & deleted, without new)
+git status     (Showing Status)
+git commit -m "message"  (To Commit)
+git log    ( To see the changes)
+
+
+#To see the changes
+git diff (to see the changes in any file, for unstaged file)
+git diff file_name.extension  (To see the Changes I have made in that file only, for unstaged file)
+git diff --staged   (to see the changes in any file, for staged file)
+git diff --staged file_name.extension  (To see the Changes I have made in that file only, for staged file)
+
+
+#Getting back by Command
+git reset file_name.extension  (To unstage any file if you have)
+git checkout file_name.extension  (To undo the changes you have made, commimg back to previous commit)
+git checkout .  (To undo the changes you have made, commimg back to previous commit, but for all file at a once)
+
+
+#To Configure username & Email
+git config --global user.name "Name"
+git config --global user.email "Your_Email"
+
+
+#Cloning a Git Repository
+ls -la	(To list out all directories)
+git clone "SSH"	(To clone a repo by creating a new folder there)
+git clone "SSH" .		(To clone a repo by not creating any new folder there)
+
+
+# to pull and push code in between local computer to Github
+git remote add origin "SSH"  (Adress of where to push & pull)
+git push -u origin master   (Local Computer to GitHub) & (-u is to make it default, if I will run 'git push')
+git push origin master		(Local Computer to Github)
+git pull origin master  (GitHub to Local Computer)
+git pull
+
+
+#Ignoring Files in git
+touch .gitignore (made a blank file)
+#Now add all the folders and files in .gitignore which you want to ignore
+
+
+#Branching in Git
+git branch		(To see the all branches and which one is active one)
+git branch login-system		(Creating a Branch of master as a name "login-system")
+git checkout login-system		(To get switched into login-sysyem Branch)
+git push origin login-system		(To push the new branch on GitHub)
+git checkout master		(To get switched into master Branch)
+git merge login-system		(merging the "login-syatem" Branch to master)
+
+
+#Deleting the old branch
+git branch -d login-system		(To delete the branch from your local only, where 'login-system' is name of branch)
+git push origin --delete login-system	(To delete the branch from your repo, where 'login-system' is name of branch)
+
+
+#Generating New SSH Key
+ssh-keygen -t ed25519 -C "sudhanshujee2020@gmail.com"   (Generating a SSH Key)
+eval "$(ssh-agent -s)"  (Skiping)
+ssh-add ~/.ssh/id_ed25519   (Adding SSH Keys to ssh-agent)
+clip < ~/.ssh/id_ed25519.pub  (Copied your SSH key to your clipboard)
+#Now add SSH Keys to GitHub
+
